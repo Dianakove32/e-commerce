@@ -6,7 +6,9 @@ export const ApiContext = React.createContext()
 
 const initialState = {
     data:[],
-    isLoaded:false
+    isLoaded:false,
+    cart:[],
+    wishlist: []
 }
 
 const ContextProvider = ({children}) => {
@@ -20,7 +22,8 @@ const getData = () =>{
     const _apiUrl = 'https://api.musement.com/api/v3/venues/164/activities?limit=6'
     setState({
         ...state,
-        isLoaded:false
+        isLoaded:false,
+
     })
     const fetchData = async () => {
     const data = await axios.get(_apiUrl)

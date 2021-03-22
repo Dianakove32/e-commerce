@@ -1,9 +1,15 @@
+import { HeaderWrapper, ItemsInnerWrap, Logo, LogoWrap } from "./style";
+
 import React from 'react'
 
 export default function Header() {
     return (
-        <div>
+        <HeaderWrapper>
+        <ItemsInnerWrap>
+            <Logo>Logo    </Logo>
+            <LogoWrap></LogoWrap>
+        </ItemsInnerWrap>
 
-        </div>
+        </HeaderWrapper>
     )
 }
